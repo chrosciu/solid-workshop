@@ -1,6 +1,6 @@
 package eu.chrost.solid.liskov;
 
-class TeslaVehicle extends Vehicle {
+class TeslaVehicle extends AbstractVehicle {
 
     private boolean charged = false;
 
