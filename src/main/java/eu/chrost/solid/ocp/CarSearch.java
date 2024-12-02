@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 class CarSearch {
     private final CarRepository repository;
 
-    public List<Car> findByName(String name) {
-        return repository.getCars().stream().filter(c -> name.equals(c.name())).collect(Collectors.toList());
+    public List<Car> findByBrand(String brand) {
+        return repository.getCars().stream().filter(c -> brand.equals(c.brand())).collect(Collectors.toList());
     }
 }

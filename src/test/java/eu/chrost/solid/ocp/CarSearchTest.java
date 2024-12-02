@@ -18,8 +18,8 @@ class CarSearchTest {
     private final CarSearch carSearch = new CarSearch(carRepository);
 
     @Test
-    void shouldBeAbleToPerformSearchByName() {
-        List<Car> foundCars = carSearch.findByName("Fiat Punto");
+    void shouldBeAbleToPerformSearchByBrand() {
+        List<Car> foundCars = carSearch.findByBrand("Fiat Punto");
 
         assertThat(foundCars).containsExactlyInAnyOrder(FIAT_PUNTO);
     }
