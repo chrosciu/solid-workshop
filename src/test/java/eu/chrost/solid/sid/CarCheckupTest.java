@@ -8,10 +8,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class CarCheckupTest {
     private final Log log = Log.getInstance();
-    private final CarService carService = new CarService();
-    private final CarCheckup carCheckup = new CarCheckup(carService, carService, carService);
+    private final CarMechanicalService carMechanicalService = new CarMechanicalService();
+    private final CarBeautyService carBeautyService = new CarBeautyService();
+    private final CarCheckup carCheckup = new CarCheckup(carMechanicalService, carBeautyService, carBeautyService);
     private final WaxCarWash waxCarWash = new WaxCarWash();
-    private final CarCheckup waxCarCheckup = new CarCheckup(carService, carService, waxCarWash);
+    private final CarCheckup waxCarCheckup = new CarCheckup(carMechanicalService, carBeautyService, waxCarWash);
 
     @AfterEach
     void cleanUp() {
