@@ -2,9 +2,10 @@ package eu.chrost.solid.sid;
 
 import eu.chrost.solid.utils.Log;
 
-class CarService {
+class CarService implements CarServicing {
     private final Log log = Log.getInstance();
 
+    @Override
     public void checkLiquids() {
         checkOil();
         checkWindscreenWasher();
@@ -23,6 +24,7 @@ class CarService {
         log.addMessage("Checking brake fluid");
     }
 
+    @Override
     public void vacuum() {
         vacuumDashboard();
         vacuumSeats();
@@ -36,6 +38,7 @@ class CarService {
         log.addMessage("Vacuuming seats");
     }
 
+    @Override
     public void wash() {
         washBody();
         washWindows();

@@ -1,15 +1,14 @@
 package eu.chrost.solid.sid;
 
-class CarCheckup {
-    private final CarService carService;
+import lombok.RequiredArgsConstructor;
 
-    public CarCheckup() {
-        this.carService = new CarService();
-    }
+@RequiredArgsConstructor
+class CarCheckup {
+    private final CarServicing carServicing;
 
     public void performCheckup() {
-        carService.checkLiquids();
-        carService.vacuum();
-        carService.wash();
+        carServicing.checkLiquids();
+        carServicing.vacuum();
+        carServicing.wash();
     }
 }
