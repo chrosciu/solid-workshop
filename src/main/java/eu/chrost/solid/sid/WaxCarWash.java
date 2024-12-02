@@ -2,9 +2,10 @@ package eu.chrost.solid.sid;
 
 import eu.chrost.solid.utils.Log;
 
-class WaxCarWash {
+class WaxCarWash implements CarWashing {
     private final Log log = Log.getInstance();
     
+    @Override
     public void wash() {
         washBody();
         washWindows();

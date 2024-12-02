@@ -2,7 +2,7 @@ package eu.chrost.solid.sid;
 
 import eu.chrost.solid.utils.Log;
 
-class CarService implements CarServicing {
+class CarService implements CarLiquidChecking, CarVacuuming, CarWashing {
     private final Log log = Log.getInstance();
 
     @Override

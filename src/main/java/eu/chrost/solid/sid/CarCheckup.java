@@ -4,11 +4,13 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 class CarCheckup {
-    private final CarServicing carServicing;
+    private final CarLiquidChecking carLiquidChecking;
+    private final CarVacuuming carVacuuming;
+    private final CarWashing carWashing;
 
     public void performCheckup() {
-        carServicing.checkLiquids();
-        carServicing.vacuum();
-        carServicing.wash();
+        carLiquidChecking.checkLiquids();
+        carVacuuming.vacuum();
+        carWashing.wash();
     }
 }
